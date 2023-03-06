@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- <div id="central-section"> -->
+    <!-- Front section - index -->
+    <section id='frontSection' class="d-grid">
+        <!-- Header -->
+        <div id="options" class="container">
+            <div id="logo" class="d-flex align-items-end justify-content-end">
+                <img src="img/js-logo.png" class="img-fluid" alt="javascript examples">
+            </div>
+            <!-- Start Content  -->
+            <div id="content" class="content">
+                <!-- <div id="subtitle" class="jsYellow"> <span class="pl-2">Algoritmos simples</span>             
+                </div> -->
+                <div id="title" class="text-center"> 
+                    <h2 class="display-3">Javascript Vanilla</h2>
+                </div>
+                <!-- Buttons -->
+                <div id="buttonsJS">
+                    <div class="d-grid gap-3">
+                        <div class="p-2 mx-auto"><button id="runCodiGi" type="button" data-bs-toggle="modal" class="btn jsYellow">CodiGi: Encrypt your ideas</button>
+                        </div>
+                        <!-- <div class="p-2 mx-auto"><button id="btn2" type="button" class="jsYellow btn btn-lg">Coming Soon</button> -->
+                        </div>
+                        <!-- <div class="p-2 mx-auto"><button id="btn3" type="button" class="btn btn-lg jsYellow">Script con... node?</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------  Start codiGi  ------------->
+    <section id="codiGi" class="">
+        <!------- Welcome with buttons ------->
+
+        <div id="welcome" class="noVisible modalCenter" role="dialog">
+            <div id="close">
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="fs-6 text-uppercase text-center">A small algorithm that encodes or decodes your ideas</div>
+            <div id="titleCodiGi" class="fs-4 fw-bold text-center title">CodiGi</div>
+            <h6 class="text-center text-uppercase">Choice your method</h6>
+            <div class="actionsCodiGi d-md-flex justify-content-between text-center">
+                <div id="openEncrypt"><button id="startEncrypt" type="button" class="btn jsYellow">Encrypt</button></div>
+                <div id="openDecode"><button id="startDecode" type="button" class="btn jsYellow">Decode</button></div>
+            </div>
+            
+        </div>
+        <!------- End Welcome ------->
+
+
+        <!------- Select Action - Encrypt / Decode ------->
+        <div id="actions" class="d-flex justify-content-center">
+
+            <!------ Encrypt ------>
+            <div id="encryptMsg" class="noVisible">                
+                <div class="row align-items-center">
+                    <div id="backToWelcome" class="col">                        
+                        <button type="button" class="btn btn-back" aria-label="Back"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg></button>
+                    </div>
+                    <div  id="close" class="col">
+                    <button type="button" class="btn btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="fs-5 text-center title jsYellow">Encrypt your ideas :)</div>
+                <!-- Form encrypt text -->
+                <div id="formEncrypt" class="d-grip form-group text-center">
+                    <!-- <div class="col text-center"> -->
+                        <textarea name="txtToEncrypt" id="txtToEncrypt" class="form-control" cols="20" rows="5" placeholder="Enter your text to encrypt"></textarea> 
+                        <button id="btnClean" type="button" class="btn jsYellow mt-2">
+                            Clean
+                            </button>
+                        <button id="btnEncrypt" type="button" class="btn btnEncrypt jsYellow mt-2">
+                        Encrypt
+                        </button>     
+                        <!-- <button id="copyCode" type="button" class="btn jsYellow mt-2">
+                            Copy
+                            </button>                     -->
+                    <!-- </div> -->
+                </div><!--ends form-->
+                <div>
+                    <img id="copyCode" src="img/copy.svg" alt="Copy code">
+                    <textarea id="encryptTxt" class="col"></textarea>
+                </div>
+                <a href="#" class="goDecode text-end mt-4">Do you want to decode a text?</a>
+            </div>
+            <!------ End Encrypt ------>
+        
+        
+            <!------ Decode ------>
+            <div id="decodeMsg" class="noVisible">                
+                <div class="row align-items-center">
+                    <div id="backToWelcome" class="col">                        
+                        <button type="button" class="btn btn-back" aria-label="Back"><svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg></button>
+                    </div>
+                    <div  id="close" class="col">
+                    <button type="button" class="btn btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="titDecode fs-5 text-center title jsYellow">Decode your text</div>
+                <!-- Form encrypt text -->
+                <div id="formDecode" class="d-grip form-group">
+                    <div class="col text-center">
+                        <textarea name="txtToDecode" id="txtToDecode" class="form-control" cols="20" rows="5" placeholder="Enter your text to decode"></textarea> 
+
+                        <button id="btnClean" type="button" class="btn jsYellow mt-2">Clean</button>
+
+                        <button id= 'btnDecode' type="button" class="btn btnDecode jsYellow mt-2">Decode</button>  
+
+                                             
+                    </div>
+                </div><!--ends from group-->
+                <div>
+                    <img id="copyDecode" src="img/copy.svg" alt="Copy decode">
+                    <textarea id="decodeTxt" class="col">Your text decode here...</textarea>
+                </div>
+                <a href="#" class="goEncrypt text-end mt-4">Do you want to encrypt a text?</a>
+            </div>
+            <!------ Decode ------>
+        </div>
+        <!-- End Select action -->
+    </section>
+    <!-- End codiGi zone -->
+   
+    <!-- <footer>
+        <div id="linksFooter" class="text-center mt-2">GitHub | LinkedIn | gileiva.AR</div>
+    </footer> -->
+<!-- </div> -->
+    <script src="scripts/general.js" type="module"></script>
+    <script src="scripts/codigi.js" type="module"></script>
+    <!-- <script src="scripts/codemoji.js" type="module"></script> -->
+</body>
+</html>

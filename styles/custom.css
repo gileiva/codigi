@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Barlow', sans-serif;
+}
+
+html body {
+    background-color: #F7E018;
+   }
+   
+#subtitle #runCodiGi #btn2 #btn3 #titleCodiGi {
+    background-color: #F7E018;
+}
+/* Central Container */
+#central-section {
+    margin: 0 auto;
+}
+#frontSection{
+    width: 100%;
+    height: 100vh;
+}
+#logo{
+    height: 20rem;
+}
+#logo img {
+    width: 45%;
+
+}
+/* Contenido */
+#options{
+    z-index: 1;
+}
+.content {
+    padding: 5rem;
+    background-color: #ffffff;
+
+}
+#subtitle {
+    display: inline-block;
+    width: 30%;
+    max-height: 3rem;
+    /* margin-top: 2.5rem; */
+    padding: 0.6rem 0;
+    text-transform: uppercase;
+    padding-left: 1.5rem;
+
+    
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#title{
+    margin: 4rem 0;
+    color: black;
+
+}
+.noVisible{
+    display: none!important;
+    pointer-events: none;
+}
+.jsYellow{
+    background-color: #F7E018!important;
+}
+
+/* Start CodiGi CSS */
+#close{
+    text-align: end;
+}
+.modalCenter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn-back{
+    padding: 0!important;
+}
+#welcome{
+    width: 90%;
+    max-width: 760px;
+    max-height: 90%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+    z-index: 1;
+}
+#actionsCodiGi{
+    width: 100%;
+}
+#runCodiGi{
+    font-size: 1.5rem;
+}
+#openEncrypt, #openDecode {
+    width: 95%;
+    height: 5rem;
+}
+#startEncrypt, #startDecode{
+    width: 95%;
+    height: 4rem;
+}
+.backgroundDark{
+    background-color: #111111bd;
+}
+
+#encryptMsg, #decodeMsg{
+    position: fixed;
+    top: 0;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 760px;
+    max-height: 90%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+#txtToEncrypt{
+    width: 100%;
+}
+#encryptTxt, #decodeTxt{
+    width: 100%;
+    height: auto;
+    background: #fffced;
+    border: 2px dashed #f7e018;
+    padding: .5rem;
+    font-weight: 600;
+
+    border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+}
+
+#copyCode, #copyDecode {
+  position: absolute;
+  right: 2rem;
+  margin-top: 0.5rem;
+}
+
+
+/* End CodiGi CSS */
+
+@media all and (min-width: 960px){
+    /* #frontSection {
+        max-width: 50%;
+        margin: 0 auto;
+    } */
+}
+@media all and (min-width: 768px){
+    header {
+        height: 40%;
+    }
+    #logo img {
+        width: 20%;
+    }
+}
+@media all and (max-width: 300px){
+    #subtitle {
+        width: 70%;
+        font-size: .8rem;
+    }
+}

@@ -4,14 +4,13 @@ import {clean} from './codigi.js'
 const front = document.querySelector('#frontSection');
 const runCodiGi = document.getElementById('runCodiGi');
 const actionsBtn = document.querySelector('#buttonsJS');
-// const close = document.querySelector('.btn-close')
+
 const closeBtn = document.querySelectorAll('.btn-close');
-// EXPORTAR?
+
 const encrypt = document.querySelector('#encryptMsg');
 const decode = document.querySelector('#decodeMsg');
 
 const welcome = document.querySelector('#welcome');
-
 const backToWelcome = document.querySelectorAll('#backToWelcome');
 
 const startEncrypt = document.querySelector('#startEncrypt');
@@ -38,7 +37,7 @@ goEncrypt.addEventListener('click', runEncrypt);
 goDecode.addEventListener('click', runDecode);
 
 
-// Functions
+// Run Codigi
 function showCodiGi(e){
     welcome.classList.remove('noVisible')
     front.classList.add('backgroundDark')
@@ -46,6 +45,7 @@ function showCodiGi(e){
     document.getElementById("options").style.zIndex = "-1";
 
 };
+//Close modals
 function closeModal(e){
     welcome.classList.add('noVisible');
     encrypt.classList.add('noVisible');
@@ -60,14 +60,13 @@ function back(){
     welcome.classList.remove('noVisible');
 }
 
-
+// The Codigi's functions
 function runEncrypt(){
     encrypt.classList.remove('noVisible')
     welcome.classList.add('noVisible')
     decode.classList.add('noVisible')
     clean();
 }
-
 function runDecode(){
     decode.classList.remove('noVisible')
     welcome.classList.add('noVisible')

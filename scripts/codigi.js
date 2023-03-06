@@ -68,24 +68,28 @@ let decodeMsg = [];
 // Start decode function
 function decody(e){
     
-    // Check if 
+    // Check flag and start magic
     if (!wasUsed){
+        // It is code that send user
         let codeTxt = txtToDecode.value;
+
         const spaceView = ' '
-        
-        // console.log(`codeTxt ${codeTxt}`)
+        // The code is now an array
         const codeArray = [...(codeTxt.split(' '))];
+
+        // We iterate through the array...
         for ( let i = 0; i < codeArray.length; i++ ) {
-            
+            // and now iterate each element to compare with Code Master
             for ( let c = 0; c < code.length; c++ ) {
-                
+                // If there is a match...
                 if (codeArray[i] == code[c][1]){
-                    // console.log(codeArray)
+                    // Check if the element is not a space
                     if (codeArray[i] !== code[64][1]){
-                        // console.log('entra al segundo if del segundo for')
+                        // If not a space, add element to final array
                         decodeMsg = [...decodeMsg, code[c][0]]
                         console.log(decodeMsg)
                     } else {
+                        // if is a space add to final array
                         decodeMsg = [...decodeMsg, spaceView]
                         console.log(decodeMsg)
                     }
@@ -94,11 +98,13 @@ function decody(e){
             }
             
         }
+        // Join final array and insert in HTML
         decodeTxt.innerHTML = decodeMsg.join('');
         wasUsed = true;
     }
 }
-           
+
+// Clean fields
 export function clean () {
     decodeMsg = [];
     encrypMsg = [];
@@ -109,6 +115,7 @@ export function clean () {
     wasUsed = false;    
 }
 
+// Copy encrypt code
 function copyCode() {
     // Get the text field
     let copyText = document.getElementById("encryptTxt");
@@ -121,7 +128,7 @@ function copyCode() {
     navigator.clipboard.writeText(copyText.value);
 
   }
-
+  // Copy decode code
   function copyDecode() {
     // Get the text field
     let copyText = document.getElementById("decodeTxt");

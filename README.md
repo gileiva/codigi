@@ -9,7 +9,7 @@ Codigi is a small app built with HTML, CSS, and JavaScript that allows you to en
 3. The result will be displayed in the yellow field.
 
 ## Try it out
-You can try Codigi out by visiting gileiva.ar/repository/codigi
+You can try Codigi out by visiting [https://gileiva.ar/repository/codigi](https://gileiva.ar/repository/codigi)
 
 ## About the author
 This app was created by Gi Leiva. Feel free to contact me with any questions or feedback.
